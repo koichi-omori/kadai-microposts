@@ -136,7 +136,7 @@ class User extends Authenticatable
     {
         $favorite_micropost_ids = $this->favorites()->pluck('microposts.id')->toArray();
         $favorite_micropost_ids[] = $this->id;
-        return Micropost::whereIn('user_id', $favorite_micropost_ids);
+        return Micropost::whereIn('micropost_id', $favorite_micropost_ids);
     }
 
 }
