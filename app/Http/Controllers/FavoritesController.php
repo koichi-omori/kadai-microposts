@@ -17,4 +17,5 @@ class FavoritesController extends Controller
         \Auth::user()->unfavorite($id);
         return back();
     }
+
 }
